@@ -1,0 +1,335 @@
+.nav-item:hover .nav-dropdown {
+  display: block;
+}
+.nav-dropdown {
+  position: center;
+  display: none;
+  z-index: 2;
+  top: 2px;
+  left: 2px;
+  width: 125px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 3px solid #E8E8E8;
+}
+.nav-dropdown a {
+  display: block;
+  padding: 5px;
+  color: #314E52;
+  text-decoration: none;
+
+}
+.fcc-btn {
+  background-color: #59ab6e;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+
+}
+.fcc-btn:hover {
+  color : #8095FF;
+
+}
+
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+  height: 100%;
+  /*Image only BG fallback*/
+  
+  /*background = gradient + image pattern combo*/
+  background: 
+    linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #27AE60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #27AE60;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*,
+*::after{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+:root{
+    --after-content:'2';
+}
+
+body{
+    width:100vw;
+    font-family: 'Lato', sans-serif;
+}
+header{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:12vh;
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    color: #fff;
+}
+.cart-box{
+    width:26% !important;
+    position: absolute;
+    left:72%;
+    top:25%;
+    /* border:solid 1px blue; */
+    padding:10px 20px;
+}
+h2{
+    font-size: x-large;
+    padding:15px 10px;
+}
+
+.cart-wrapper{
+    overflow-y: auto;
+    max-height: 350px;
+    width:24vw;
+}
+.subtotal{
+    text-align: right;
+    padding:5%;
+}
+.checkout, .view-cart{
+    width:95%;
+    text-align: center;
+    cursor: pointer;
+    background-color: brown;
+    font-size: large;
+    color: #fff;
+    margin:10px auto;
+    padding:10px 15px;
+}
+.view-cart{
+    background-color: #fff;
+    border: 2px solid brown;
+    color: brown;
+}
+.cart-icon{
+    text-align: right;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  padding:5% 2%;
+  border-bottom:solid 1px lightgray;  
+}
+
+.cart-item img{
+    width:100%;
+}
+.cart-item .details{
+    padding-left:10%;
+}
+
+.cart-item h3{
+  text-align: left; 
+  margin-bottom:5%; 
+}
+
+.cart-item .price{
+display: block;
+text-align: right;
+margin-top: 35%; 
+  }
+  
+ .quantity{
+     display: block;
+     margin-top:5%;
+ } 
+
+ .fa-window-close{
+     color: brown;
+ }
+ .cancel{
+     text-align: right;
+ }
+ .whole-cart-window{
+     border: solid lightgray 1px;
+     border-top:none;
+     position: fixed;
+     top:12vh;
+     background-color: #fff;
+     margin-right:2%;
+ }
+
+ .hide{
+     display: none;
+ }
+.non-empty::after{
+  content: var(--after-content);
+  font-size: 25px;
+  width:25px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top:-20px;
+  right:20%;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    height:600px;
+    justify-content: center;
+    align-items: center;
+}
+.card-item img{
+    width:45%;
+}
+.card-item .details{
+    text-align: center;    
+}
+.card-item p,.card-item h3 {
+    margin-top:10px;   
+}
+.card-item span{
+    display: block;
+    margin-top:10px;
+}
+.add-to-cart-btn{
+    width: fit-content;
+    margin:auto;
+    /* margin-top:10px; */
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: brown;
+    border-radius: 3px;
+    font-size: large;
+    color:#fff
+}

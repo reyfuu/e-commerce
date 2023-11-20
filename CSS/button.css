@@ -1,0 +1,35 @@
+.btn {
+  
+  background-color: transparent;
+  border: 2px solid #59ab6e;
+  border-radius: 5px;
+  color: #59ab6e;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 5px;
+  line-height: 1;
+  margin: 15px;
+  padding: 7px 7px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: lowercase;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 100;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+.third {
+  border-color: #59ab6e;
+  color: #59ab6e;
+  box-shadow: 0 0 20px 20px #59ab6e inset, 0 0 0 0 #59ab6e;
+  transition: all 150ms ease-in-out;
+}
+.third:hover {
+  box-shadow: 0 0 10px 0 #59ab6e inset, 0 0 10px 4px #59ab6e;
+}
+
+
+
